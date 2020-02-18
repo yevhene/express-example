@@ -1,0 +1,10 @@
+<h3>Student #<%= student.id %></h3>
+
+<dl>
+  <dt>Ім'я</dt><dd><%= student.name %></dd>
+  <dt>Група</dt><dd><%= student.group %></dd>
+</dl>
+
+<a href="/students/<%= student.id %>/edit">Редагувати</a> |
+<a href="/students/<%= student.id %>/delete">Видалити</a> |
+<a href="/">Назад</a>

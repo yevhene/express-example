@@ -1,0 +1,22 @@
+<h3>Students</h3>
+
+<table>
+  <thead>
+    <tr><th>#</th><th>Ім'я</th><th>Група</th></tr>
+  </thead>
+  <tbody>
+    <% for (const student of students) { %>
+      <tr>
+        <td>
+          <a href="/students/<%= student.id %>">
+            <%= student.id %>
+          </a>
+        </td>
+        <td><%= student.name %></td>
+        <td><%= student.group %></td>
+      </tr>
+    <% } %>
+  </tbody>
+</table>
+
+<a href="/students/new">Створити</a>

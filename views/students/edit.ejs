@@ -1,0 +1,7 @@
+<h3>Редагування студента #<%= student.id %></h3>
+
+<form method="POST" action="/students/<%= student.id %>">
+  <%- include('_form', { student }) %>
+</form>
+
+<a href="/">Назад</a>
