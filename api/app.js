@@ -1,8 +1,10 @@
 const bodyParser = require('body-parser');
 const express = require('express');
+const cors = require('cors');
 const app = express();
 
-app.use(bodyParser.json())
+app.use(bodyParser.json());
+app.use(cors());
 
 const students = [{
   id: 1,
@@ -47,7 +49,7 @@ app.get('/students/:id', function(req, res) {
   res.send(student);
 });
 
-app.get('/students/:id/delete', function(req, res) {
+app.delete('/students/:id', function(req, res) {
   const studentId = parseInt(req.params.ida );
   const index = students.findIndex((student) => student.id === studentId);
   students.splice(index, 1);
